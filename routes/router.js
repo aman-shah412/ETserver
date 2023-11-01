@@ -169,7 +169,7 @@ router.post("/adduser", async (req, res) => {
         let signUpLink
         connect.save().then(savedDocument => {
             let doc = savedDocument
-            signUpLink = `localhost:5173/signup/${doc._id}`
+            signUpLink = `https://event-traker.onrender.com/signup/${doc._id}`
             try {
                 const transporter = nodemailer.createTransport({
                     service: "gmail",
